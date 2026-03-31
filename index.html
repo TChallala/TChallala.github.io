@@ -19,9 +19,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <!-- DevIcons for Technology Logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Skip to Content (Accessibility) -->
+  <a href="#about" class="skip-to-content">Skip to main content</a>
 
   <!-- ===== NAVIGATION ===== -->
   <nav class="navbar" id="navbar">
@@ -57,8 +66,8 @@
         &mdash; and I make sure it stays that way.
       </p>
       <div class="hero-cta reveal">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+        <a href="mailto:theo3rdg@gmail.com" class="btn btn-outline">Get In Touch</a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -79,7 +88,8 @@
             with a unique edge &mdash; I don't just build software, I break it too. 
             My background spans both development and quality assurance, which means 
             I think about reliability, edge cases, and user experience from the very 
-            first line of code.
+            first line of code. I work across dual OS environments (Windows 11 and 
+            Linux Arch) for maximum flexibility and cross-platform perspective.
           </p>
           <p>
             Currently working as a <strong>Junior QA Automation Engineer</strong> at 
@@ -135,10 +145,10 @@
             <h3>Frontend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="skill-tag"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
             <span class="skill-tag">Responsive Design</span>
           </div>
         </div>
@@ -151,12 +161,12 @@
             <h3>Backend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Go</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">Laravel (PHP)</span>
-            <span class="skill-tag">Django</span>
+            <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="skill-tag"><i class="devicon-go-original-wordmark colored"></i> Go</span>
+            <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
+            <span class="skill-tag"><i class="devicon-laravel-plain colored"></i> Laravel (PHP)</span>
+            <span class="skill-tag"><i class="devicon-django-plain colored"></i> Django</span>
             <span class="skill-tag">REST APIs</span>
             <span class="skill-tag">gRPC</span>
             <span class="skill-tag">Microservices</span>
@@ -171,12 +181,13 @@
             <h3>QA & Testing</h3>
           </div>
           <div class="skill-tags">
+            <span class="skill-tag"><i class="devicon-pytest-plain colored"></i> pytest</span>
+            <span class="skill-tag">BDD / Gherkin</span>
+            <span class="skill-tag">Allure Reports</span>
             <span class="skill-tag">Manual Testing</span>
-            <span class="skill-tag">Automation Scripting</span>
-            <span class="skill-tag">API Testing (Postman)</span>
+            <span class="skill-tag"><i class="devicon-postman-plain colored"></i> API Testing (Postman)</span>
             <span class="skill-tag">Regression Testing</span>
             <span class="skill-tag">Test Case Design</span>
-            <span class="skill-tag">Bug Reporting</span>
           </div>
         </div>
         <!-- Tools & Workflow -->
@@ -188,14 +199,15 @@
             <h3>Tools & Workflow</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Git & GitHub</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Prometheus</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">Trello</span>
+            <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git & GitHub</span>
+            <span class="skill-tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+            <span class="skill-tag"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
+            <span class="skill-tag"><i class="devicon-linux-plain"></i> Linux (Arch)</span>
+            <span class="skill-tag"><i class="devicon-windows11-original colored"></i> Windows 11</span>
+            <span class="skill-tag"><i class="devicon-jira-plain colored"></i> Jira</span>
+            <span class="skill-tag"><i class="devicon-trello-plain colored"></i> Trello</span>
             <span class="skill-tag">Agile / Scrum</span>
             <span class="skill-tag">CI/CD Concepts</span>
-            <span class="skill-tag">Technical Documentation</span>
           </div>
         </div>
       </div>
@@ -219,10 +231,11 @@
               <span class="timeline-date">2025 &mdash; Present</span>
             </div>
             <ul class="timeline-details">
-              <li>Design and execute manual and automated test cases for web applications and APIs</li>
+              <li>Design and execute automated test suites using pytest with BDD/Gherkin syntax</li>
+              <li>Generate comprehensive test reports using Allure for stakeholder visibility</li>
               <li>Perform API testing, validate responses, and verify backend data handling</li>
               <li>Log defects with clear reproduction steps and verify fixes after resolution</li>
-              <li>Collaborate with developers and PMs to improve test coverage and product quality</li>
+              <li>Work across dual OS environments (Windows 11 & Linux Arch) for cross-platform testing</li>
             </ul>
           </div>
         </div>
@@ -307,14 +320,14 @@
       </h2>
       <div class="projects-grid">
         <!-- Project 1: Featured - Polyglot gRPC Calculator -->
-        <div class="project-card project-card-featured reveal">
+        <article class="project-card project-card-featured reveal">
           <div class="project-card-header">
-            <div class="project-folder">
+            <div class="project-folder" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
             </div>
             <div class="project-links">
-              <a href="https://github.com/TChallala/-polyglot-grpc-calculator" target="_blank" rel="noopener noreferrer" aria-label="View GitHub Repository">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <a href="https://github.com/TChallala/-polyglot-grpc-calculator" target="_blank" rel="noopener noreferrer" aria-label="View Polyglot gRPC Calculator on GitHub">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </a>
             </div>
           </div>
@@ -324,17 +337,17 @@
             microservice in a different language. Features gRPC-based inter-service communication, 
             Docker containerization, and Prometheus monitoring for observability.
           </p>
-          <div class="project-tech">
-            <span>Node.js</span>
-            <span>Go</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>gRPC</span>
-            <span>React</span>
-            <span>Docker</span>
-            <span>Prometheus</span>
+          <div class="project-tech" role="list">
+            <span role="listitem"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span role="listitem"><i class="devicon-go-original-wordmark colored"></i> Go</span>
+            <span role="listitem"><i class="devicon-python-plain colored"></i> Python</span>
+            <span role="listitem"><i class="devicon-java-plain colored"></i> Java</span>
+            <span role="listitem">gRPC</span>
+            <span role="listitem"><i class="devicon-react-original colored"></i> React</span>
+            <span role="listitem"><i class="devicon-docker-plain colored"></i> Docker</span>
+            <span role="listitem"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
           </div>
-        </div>
+        </article>
         <!-- Project 2 -->
         <div class="project-card reveal">
           <div class="project-card-header">
@@ -348,9 +361,9 @@
             with dynamic content navigation and user engagement features.
           </p>
           <div class="project-tech">
-            <span>HTML/CSS/JS</span>
-            <span>PHP</span>
-            <span>MySQL</span>
+            <span><i class="devicon-html5-plain colored"></i> HTML/CSS/JS</span>
+            <span><i class="devicon-php-plain colored"></i> PHP</span>
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
           </div>
         </div>
         <!-- Project 3 -->
@@ -366,10 +379,10 @@
             with scheduling, client management, and availability tracking.
           </p>
           <div class="project-tech">
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>Bootstrap</span>
+            <span><i class="devicon-php-plain colored"></i> PHP</span>
+            <span><i class="devicon-laravel-plain colored"></i> Laravel</span>
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
           </div>
         </div>
         <!-- Project 4 -->
@@ -385,9 +398,9 @@
             allocations, and compliance with automated report generation.
           </p>
           <div class="project-tech">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>JavaScript</span>
+            <span><i class="devicon-php-plain colored"></i> PHP</span>
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
             <span>XAMPP</span>
           </div>
         </div>
@@ -405,8 +418,8 @@
           </p>
           <div class="project-tech">
             <span>Google Forms API</span>
-            <span>PHP</span>
-            <span>JavaScript</span>
+            <span><i class="devicon-php-plain colored"></i> PHP</span>
+            <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
           </div>
         </div>
         <!-- Project 6 -->
@@ -422,10 +435,10 @@
             payment tracking, and financial reporting for property management.
           </p>
           <div class="project-tech">
-            <span>PHP</span>
-            <span>Laravel</span>
-            <span>MySQL</span>
-            <span>Vue.js</span>
+            <span><i class="devicon-php-plain colored"></i> PHP</span>
+            <span><i class="devicon-laravel-plain colored"></i> Laravel</span>
+            <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
           </div>
         </div>
       </div>

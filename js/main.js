@@ -13,6 +13,7 @@
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.nav-link');
   const backToTop = document.getElementById('backToTop');
+  const scrollProgress = document.getElementById('scrollProgress');
   const sections = document.querySelectorAll('.section');
   const reveals = document.querySelectorAll('.reveal');
 
@@ -118,7 +119,7 @@
   staggerContainers.forEach(function (container) {
     var children = container.querySelectorAll('.reveal');
     children.forEach(function (child, index) {
-      child.style.transitionDelay = index * 0.1 + 's';
+      child.style.setProperty('--stagger-delay', index);
     });
   });
 
@@ -130,10 +131,21 @@
       window.requestAnimationFrame(function () {
         handleNavbarScroll();
         handleBackToTop();
+        handleScrollProgress();
         highlightActiveSection();
         ticking = false;
       });
       ticking = true;
+    }
+  }
+
+  // --- Scroll Progress Indicator ---
+  function handleScrollProgress() {
+    var winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    if (scrollProgress) {
+      scrollProgress.style.width = scrolled + '%';
     }
   }
 
