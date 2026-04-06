@@ -56,18 +56,59 @@
   <!-- ===== HERO SECTION ===== -->
   <section class="hero" id="hero">
     <div class="hero-bg-glow"></div>
+    <div class="hero-grid-bg"></div>
     <div class="container hero-content">
+      <!-- Open to Work Badge -->
+      <div class="status-badge reveal">
+        <span class="status-dot"></span>
+        <span>Open to Opportunities</span>
+      </div>
+      
       <p class="hero-greeting reveal">Hi, my name is</p>
       <h1 class="hero-name reveal">Teofilo Gonzaga <span class="accent">III</span></h1>
-      <h2 class="hero-tagline reveal">Full Stack Developer. <span class="accent">Quality-Driven.</span></h2>
-      <p class="hero-description reveal">
-        I build and test reliable web applications end-to-end. With a foundation in 
-        full stack development and hands-on QA experience, I ship software that works 
-        &mdash; and I make sure it stays that way.
+      
+      <!-- Role Switcher -->
+      <div class="role-switcher reveal">
+        <button class="role-tab active" data-role="fullstack">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Full Stack Developer
+        </button>
+        <button class="role-tab" data-role="qa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+          QA Engineer
+        </button>
+      </div>
+      
+      <h2 class="hero-tagline reveal">
+        <span class="tagline-text" id="heroTagline">I build reliable web applications & distributed systems.</span>
+      </h2>
+      
+      <p class="hero-description reveal" id="heroDescription">
+        Full Stack Developer with hands-on experience in modern frontend/backend technologies, 
+        microservices, and a <strong>QA-first mindset</strong>. I don't just ship code &mdash; 
+        I make sure it works and stays that way.
       </p>
+      
+      <div class="hero-meta reveal">
+        <div class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span>Currently @ <strong>Project Moonshot</strong></span>
+        </div>
+        <div class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Bukidnon, Philippines</span>
+        </div>
+      </div>
+      
       <div class="hero-cta reveal">
-        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
-        <a href="mailto:theo3rdg@gmail.com" class="btn btn-outline">Get In Touch</a>
+        <a href="#projects" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+          View My Work
+        </a>
+        <a href="#contact" class="btn btn-outline btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Get In Touch
+        </a>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -81,15 +122,25 @@
       <h2 class="section-title reveal">
         <span class="section-number">01.</span> About Me
       </h2>
+      
+      <!-- Value Proposition Banner -->
+      <div class="value-prop reveal">
+        <div class="value-prop-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+        </div>
+        <div class="value-prop-content">
+          <h3>Developer + QA Hybrid</h3>
+          <p>I don't just build software &mdash; I break it too. Every feature I build comes with a quality-first mindset baked in from line one.</p>
+        </div>
+      </div>
+      
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a Full Stack Developer from Malaybalay City, Bukidnon, Philippines, 
-            with a unique edge &mdash; I don't just build software, I break it too. 
+            I'm a Full Stack Developer from Malaybalay City, Bukidnon, Philippines. 
             My background spans both development and quality assurance, which means 
             I think about reliability, edge cases, and user experience from the very 
-            first line of code. I work across dual OS environments (Windows 11 and 
-            Linux Arch) for maximum flexibility and cross-platform perspective.
+            first line of code.
           </p>
           <p>
             Currently working as a <strong>Junior QA Automation Engineer</strong> at 
@@ -99,30 +150,60 @@
             that's both functional and dependable.
           </p>
           <p>
-            Outside of my current role, I've freelanced on 6+ projects ranging from 
-            full-stack web systems to distributed microservices architectures. I've 
-            explored modern technologies like gRPC, Docker, and service observability 
-            while managing everything from requirements to deployment. I'm comfortable 
-            working independently in remote setups, collaborating with cross-functional 
-            teams, and quickly picking up new tools and frameworks.
+            I've freelanced on 6+ projects ranging from full-stack web systems to 
+            distributed microservices architectures, exploring technologies like 
+            gRPC, Docker, and Prometheus while managing everything from requirements 
+            to deployment.
           </p>
+          
+          <!-- What I Bring -->
+          <div class="what-i-bring">
+            <h4>What I Bring to the Table</h4>
+            <ul class="bring-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                End-to-end ownership from dev to deployment
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Quality assurance mindset in every commit
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Comfortable with remote & async collaboration
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Quick to learn new tools & frameworks
+              </li>
+            </ul>
+          </div>
         </div>
+        
         <div class="about-highlights reveal">
-          <div class="highlight-card">
+          <div class="highlight-card highlight-featured">
             <span class="highlight-number">6+</span>
             <span class="highlight-label">Projects Delivered</span>
+            <span class="highlight-sub">Full-stack systems & microservices</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-number">2+</span>
-            <span class="highlight-label">Years Building Software</span>
+            <span class="highlight-number">4+</span>
+            <span class="highlight-label">Years in Tech</span>
+            <span class="highlight-sub">Development & QA combined</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-number highlight-icon">&#9670;</span>
-            <span class="highlight-label">Dev + QA Hybrid</span>
+            <span class="highlight-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </span>
+            <span class="highlight-label">Full Stack</span>
+            <span class="highlight-sub">Frontend to Backend</span>
           </div>
           <div class="highlight-card">
-            <span class="highlight-number highlight-icon">&#9670;</span>
-            <span class="highlight-label">Remote-Ready</span>
+            <span class="highlight-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </span>
+            <span class="highlight-label">Test Automation</span>
+            <span class="highlight-sub">UI, API & E2E Testing</span>
           </div>
         </div>
       </div>
@@ -135,79 +216,129 @@
       <h2 class="section-title reveal">
         <span class="section-number">02.</span> Skills & Tech Stack
       </h2>
+      
+      <!-- Skills Filter Tabs -->
+      <div class="skills-filter reveal">
+        <button class="filter-tab active" data-filter="all">All Skills</button>
+        <button class="filter-tab" data-filter="dev">Development</button>
+        <button class="filter-tab" data-filter="qa">QA & Testing</button>
+        <button class="filter-tab" data-filter="tools">Tools</button>
+      </div>
+      
       <div class="skills-grid">
         <!-- Frontend -->
-        <div class="skill-category reveal">
+        <div class="skill-category reveal" data-category="dev">
           <div class="skill-category-header">
             <div class="skill-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
             </div>
             <h3>Frontend</h3>
+            <span class="skill-badge">Dev</span>
           </div>
           <div class="skill-tags">
             <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
             <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
             <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
             <span class="skill-tag"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
+            <span class="skill-tag"><i class="devicon-react-original colored"></i> React</span>
             <span class="skill-tag">Responsive Design</span>
           </div>
         </div>
         <!-- Backend -->
-        <div class="skill-category reveal">
+        <div class="skill-category reveal" data-category="dev">
           <div class="skill-category-header">
             <div class="skill-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
             </div>
             <h3>Backend</h3>
+            <span class="skill-badge">Dev</span>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="skill-tag skill-primary"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="skill-tag skill-primary"><i class="devicon-python-plain colored"></i> Python</span>
             <span class="skill-tag"><i class="devicon-go-original-wordmark colored"></i> Go</span>
-            <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
             <span class="skill-tag"><i class="devicon-java-plain colored"></i> Java</span>
-            <span class="skill-tag"><i class="devicon-laravel-plain colored"></i> Laravel (PHP)</span>
+            <span class="skill-tag"><i class="devicon-laravel-plain colored"></i> Laravel</span>
             <span class="skill-tag"><i class="devicon-django-plain colored"></i> Django</span>
             <span class="skill-tag">REST APIs</span>
             <span class="skill-tag">gRPC</span>
             <span class="skill-tag">Microservices</span>
           </div>
         </div>
-        <!-- QA & Testing -->
-        <div class="skill-category reveal">
+        <!-- Database -->
+        <div class="skill-category reveal" data-category="dev">
           <div class="skill-category-header">
             <div class="skill-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
             </div>
-            <h3>QA & Testing</h3>
+            <h3>Database</h3>
+            <span class="skill-badge">Dev</span>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag"><i class="devicon-pytest-plain colored"></i> pytest</span>
-            <span class="skill-tag">BDD / Gherkin</span>
-            <span class="skill-tag">Allure Reports</span>
-            <span class="skill-tag">Manual Testing</span>
-            <span class="skill-tag"><i class="devicon-postman-plain colored"></i> API Testing (Postman)</span>
-            <span class="skill-tag">Regression Testing</span>
-            <span class="skill-tag">Test Case Design</span>
+            <span class="skill-tag"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span class="skill-tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+            <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="skill-tag">XAMPP</span>
+            <span class="skill-tag">LAMP Stack</span>
           </div>
         </div>
-        <!-- Tools & Workflow -->
-        <div class="skill-category reveal">
+        <!-- QA & Testing -->
+        <div class="skill-category skill-category-featured reveal" data-category="qa">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <h3>QA & Test Automation</h3>
+            <span class="skill-badge skill-badge-qa">QA</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag skill-primary"><i class="devicon-pytest-plain colored"></i> pytest</span>
+            <span class="skill-tag skill-primary">BDD / Gherkin</span>
+            <span class="skill-tag skill-primary"><i class="devicon-selenium-original colored"></i> Selenium</span>
+            <span class="skill-tag skill-primary">UI Automation</span>
+            <span class="skill-tag skill-primary">E2E Testing</span>
+            <span class="skill-tag skill-primary">API Automation</span>
+            <span class="skill-tag"><i class="devicon-postman-plain colored"></i> Postman</span>
+            <span class="skill-tag">Allure Reports</span>
+            <span class="skill-tag">REST API Testing</span>
+            <span class="skill-tag">Regression Testing</span>
+            <span class="skill-tag">Test Case Design</span>
+            <span class="skill-tag">Defect Tracking</span>
+          </div>
+        </div>
+        <!-- DevOps & Tools -->
+        <div class="skill-category reveal" data-category="tools">
           <div class="skill-category-header">
             <div class="skill-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
             </div>
-            <h3>Tools & Workflow</h3>
+            <h3>DevOps & Infrastructure</h3>
+            <span class="skill-badge">Tools</span>
           </div>
           <div class="skill-tags">
+            <span class="skill-tag skill-primary"><i class="devicon-docker-plain colored"></i> Docker</span>
             <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git & GitHub</span>
-            <span class="skill-tag"><i class="devicon-docker-plain colored"></i> Docker</span>
             <span class="skill-tag"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
             <span class="skill-tag"><i class="devicon-linux-plain"></i> Linux (Arch)</span>
             <span class="skill-tag"><i class="devicon-windows11-original colored"></i> Windows 11</span>
+            <span class="skill-tag">CI/CD Concepts</span>
+          </div>
+        </div>
+        <!-- Project Management -->
+        <div class="skill-category reveal" data-category="tools">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Collaboration</h3>
+            <span class="skill-badge">Tools</span>
+          </div>
+          <div class="skill-tags">
             <span class="skill-tag"><i class="devicon-jira-plain colored"></i> Jira</span>
             <span class="skill-tag"><i class="devicon-trello-plain colored"></i> Trello</span>
             <span class="skill-tag">Agile / Scrum</span>
-            <span class="skill-tag">CI/CD Concepts</span>
+            <span class="skill-tag">Technical Documentation</span>
+            <span class="skill-tag">Remote Collaboration</span>
           </div>
         </div>
       </div>
@@ -222,21 +353,29 @@
       </h2>
       <div class="timeline">
         <!-- Entry 1: Current Role -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item timeline-current reveal">
+          <div class="timeline-dot timeline-dot-current"></div>
           <div class="timeline-content">
+            <span class="timeline-badge">Current</span>
             <div class="timeline-header">
               <h3>Junior QA Automation Engineer</h3>
               <span class="timeline-company">Project Moonshot</span>
               <span class="timeline-date">2025 &mdash; Present</span>
             </div>
             <ul class="timeline-details">
-              <li>Design and execute automated test suites using pytest with BDD/Gherkin syntax</li>
-              <li>Generate comprehensive test reports using Allure for stakeholder visibility</li>
-              <li>Perform API testing, validate responses, and verify backend data handling</li>
-              <li>Log defects with clear reproduction steps and verify fixes after resolution</li>
-              <li>Work across dual OS environments (Windows 11 & Linux Arch) for cross-platform testing</li>
+              <li>Build and maintain UI automation test suites using Selenium and pytest</li>
+              <li>Develop API automation tests for REST endpoints with comprehensive validation</li>
+              <li>Implement end-to-end (E2E) test scenarios using BDD/Gherkin syntax</li>
+              <li>Generate test reports using Allure for stakeholder visibility and traceability</li>
             </ul>
+            <div class="timeline-tech">
+              <span>pytest</span>
+              <span>Selenium</span>
+              <span>BDD</span>
+              <span>API Automation</span>
+              <span>Allure</span>
+              <span>Jira</span>
+            </div>
           </div>
         </div>
         <!-- Entry 2: Intern -->
@@ -253,6 +392,11 @@
               <li>Supported sprint planning, stand-ups, and sprint reviews as acting Scrum Master</li>
               <li>Contributed to improving QA workflows and documentation standards</li>
             </ul>
+            <div class="timeline-tech">
+              <span>Jira</span>
+              <span>Trello</span>
+              <span>Scrum</span>
+            </div>
           </div>
         </div>
         <!-- Entry 3: Freelance -->
@@ -265,26 +409,19 @@
               <span class="timeline-date">2021 &mdash; Present</span>
             </div>
             <ul class="timeline-details">
-              <li>Designed, developed, tested, and deployed 6+ projects including full-stack web systems and distributed microservices architectures</li>
-              <li>Built a polyglot gRPC calculator with independent services in Node.js, Go, Python, and Java; containerized with Docker and monitored with Prometheus</li>
-              <li>Managed full project lifecycle: requirements, development, QA testing, and deployment</li>
-              <li>Integrated third-party services and APIs; performed functional & user acceptance testing</li>
+              <li>Delivered 6+ projects including full-stack web systems and distributed microservices</li>
+              <li>Built polyglot gRPC calculator with Node.js, Go, Python, Java services</li>
+              <li>Managed full project lifecycle: requirements → development → QA → deployment</li>
+              <li>Containerized services with Docker; integrated Prometheus for monitoring</li>
             </ul>
-          </div>
-        </div>
-        <!-- Entry 4: Service Crew -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Service Crew</h3>
-              <span class="timeline-company">Chukoohills Caf&eacute; & Resto</span>
-              <span class="timeline-date">2021</span>
+            <div class="timeline-tech">
+              <span>Node.js</span>
+              <span>Laravel</span>
+              <span>Vue.js</span>
+              <span>gRPC</span>
+              <span>Docker</span>
+              <span>MySQL</span>
             </div>
-            <ul class="timeline-details">
-              <li>Built strong communication, time management, and teamwork skills under pressure</li>
-              <li>Developed reliability and accuracy in a fast-paced service environment</li>
-            </ul>
           </div>
         </div>
         <!-- Education -->
@@ -451,41 +588,63 @@
       <h2 class="section-title reveal">
         <span class="section-number">05.</span> Get In Touch
       </h2>
+      
       <div class="contact-content reveal">
+        <!-- Availability Status -->
+        <div class="availability-status">
+          <span class="status-indicator"></span>
+          <span>Available for opportunities</span>
+        </div>
+        
+        <h3 class="contact-heading">Let's Work Together</h3>
         <p class="contact-text">
           I'm currently open to new opportunities &mdash; whether it's a full-time role, 
-          freelance project, or collaboration. If you have a question, a project idea, 
-          or just want to say hello, feel free to reach out. I'll do my best to get back to you.
+          freelance project, or collaboration. I'm interested in Full Stack Developer 
+          and QA Engineer positions where I can contribute and grow.
         </p>
-        <a href="mailto:theo3rdg@gmail.com" class="btn btn-primary btn-lg">Say Hello</a>
-        <div class="contact-details">
-          <div class="contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-            <a href="mailto:thirdteofilo@gmail.com">thirdteofilo@gmail.com</a>
+        
+        <div class="contact-cta-group">
+          <a href="mailto:theo3rdg@gmail.com" class="btn btn-primary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Send Email
+          </a>
+          <a href="https://www.linkedin.com/in/teofilo-iii-gonzaga-300934358/" target="_blank" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div class="contact-card-content">
+              <span class="contact-card-label">Email</span>
+              <a href="mailto:theo3rdg@gmail.com">theo3rdg@gmail.com</a>
+            </div>
           </div>
-          <div class="contact-item">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-  </svg>
-  <a href="https://www.facebook.com/teofilo.808150/" target="_blank">Facebook</a>
-</div>
-
-<div class="contact-item">
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-    <rect x="2" y="9" width="4" height="12"></rect>
-    <circle cx="4" cy="4" r="2"></circle>
-  </svg>
-  <a href="https://www.linkedin.com/in/teofilo-iii-gonzaga-300934358/" target="_blank">LinkedIn</a>
-</div>
-          <div class="contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Malaybalay City, Bukidnon, Philippines</span>
+          
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="contact-card-content">
+              <span class="contact-card-label">Location</span>
+              <span>Malaybalay City, Bukidnon, Philippines</span>
+            </div>
           </div>
         </div>
+        
         <div class="contact-socials">
           <a href="https://github.com/TChallala" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/teofilo-iii-gonzaga-300934358/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/teofilo.808150/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
         </div>
       </div>
