@@ -5,7 +5,7 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  /* Colors */
+  /* Colors - Dark Mode (Default) */
   --bg-primary: #0a0a0f;
   --bg-secondary: #12121a;
   --bg-tertiary: #1a1a2e;
@@ -66,6 +66,24 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+/* Light Mode */
+:root[data-theme="light"] {
+  /* Colors - Light Mode */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8fa;
+  --bg-tertiary: #f0f0f3;
+  --bg-card: #ffffff;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-glow: rgba(37, 99, 235, 0.1);
+  --accent-glow-strong: rgba(37, 99, 235, 0.2);
+  --text-primary: #1a1a1f;
+  --text-secondary: #666670;
+  --text-muted: #999999;
+  --border: #e5e5e9;
+  --border-hover: #d9d9e0;
+}
+
 /* --- Reset & Base --- */
 *,
 *::before,
@@ -88,6 +106,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
 }
 
 a {
@@ -285,6 +304,10 @@ button:focus-visible {
   padding: 12px 0;
 }
 
+:root[data-theme="light"] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .nav-container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -314,6 +337,50 @@ button:focus-visible {
   display: flex;
   gap: 32px;
   align-items: center;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+  margin-left: 16px;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+.theme-icon-sun,
+.theme-icon-moon {
+  transition: opacity var(--transition-base), transform var(--transition-base);
+  position: absolute;
+}
+
+.theme-icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-icon-moon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0.8);
+}
+
+:root[data-theme="light"] .theme-icon-sun {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.8);
+}
+
+:root[data-theme="light"] .theme-icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 .nav-link {

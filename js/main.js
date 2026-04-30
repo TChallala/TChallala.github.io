@@ -134,6 +134,44 @@
     }
   });
 
+  // --- Theme Toggle (Dark/Light Mode) ---
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlElement = document.documentElement;
+  
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  
+  function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = getSystemTheme();
+    const theme = savedTheme || systemTheme;
+    
+    if (theme === 'light') {
+      htmlElement.setAttribute('data-theme', 'light');
+    } else {
+      htmlElement.removeAttribute('data-theme');
+    }
+  }
+  
+  function toggleTheme() {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    if (newTheme === 'light') {
+      htmlElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      htmlElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    }
+  }
+  
+  themeToggle.addEventListener('click', toggleTheme);
+  
+  // Initialize theme on page load
+  initializeTheme();
+
   // --- Navbar Scroll Effect ---
   function handleNavbarScroll() {
     if (window.scrollY > 50) {
