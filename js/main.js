@@ -275,6 +275,126 @@
   handleNavbarScroll();
   handleBackToTop();
 
+  // --- Project Gallery Navigation ---
+  document.querySelectorAll('.project-gallery').forEach(function (gallery) {
+    const mainImage = gallery.querySelector('.project-image');
+    const prevBtn = gallery.querySelector('.gallery-prev');
+    const nextBtn = gallery.querySelector('.gallery-next');
+    const thumbs = gallery.querySelectorAll('.thumb');
+    
+    function updateImage(src) {
+      mainImage.style.opacity = '0';
+      setTimeout(function () {
+        mainImage.src = src;
+        mainImage.style.opacity = '1';
+      }, 150);
+      
+      thumbs.forEach(function (thumb) {
+        thumb.classList.toggle('active', thumb.dataset.src === src);
+      });
+    }
+    
+    function goToNext() {
+      const activeThumb = gallery.querySelector('.thumb.active');
+      const nextThumb = activeThumb.nextElementSibling || thumbs[0];
+      updateImage(nextThumb.dataset.src);
+    }
+    
+    function goToPrev() {
+      const activeThumb = gallery.querySelector('.thumb.active');
+      const prevThumb = activeThumb.previousElementSibling || thumbs[thumbs.length - 1];
+      updateImage(prevThumb.dataset.src);
+    }
+    
+    if (prevBtn) prevBtn.addEventListener('click', goToPrev);
+    if (nextBtn) nextBtn.addEventListener('click', goToNext);
+    
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        updateImage(thumb.dataset.src);
+      });
+    });
+  });
+
+  // --- Lightbox Modal ---
+  const lightboxModal = document.getElementById('lightboxModal');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  const lightboxCurrent = document.getElementById('lightboxCurrent');
+  const lightboxTotal = document.getElementById('lightboxTotal');
+  
+  let currentGallery = null;
+  let currentImageIndex = 0;
+  
+  function openLightbox(gallery, imageIndex) {
+    currentGallery = gallery;
+    currentImageIndex = imageIndex;
+    const thumbs = gallery.querySelectorAll('.thumb');
+    lightboxTotal.textContent = thumbs.length;
+    
+    const thumbSrc = thumbs[imageIndex].dataset.src;
+    lightboxImage.src = thumbSrc;
+    lightboxImage.alt = thumbs[imageIndex].alt;
+    lightboxCurrent.textContent = imageIndex + 1;
+    
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeLightbox() {
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+    currentGallery = null;
+  }
+  
+  function nextImage() {
+    if (!currentGallery) return;
+    const thumbs = currentGallery.querySelectorAll('.thumb');
+    currentImageIndex = (currentImageIndex + 1) % thumbs.length;
+    openLightbox(currentGallery, currentImageIndex);
+  }
+  
+  function prevImage() {
+    if (!currentGallery) return;
+    const thumbs = currentGallery.querySelectorAll('.thumb');
+    currentImageIndex = (currentImageIndex - 1 + thumbs.length) % thumbs.length;
+    openLightbox(currentGallery, currentImageIndex);
+  }
+  
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxNext.addEventListener('click', nextImage);
+  lightboxPrev.addEventListener('click', prevImage);
+  
+  lightboxModal.addEventListener('click', function (e) {
+    if (e.target === lightboxModal) closeLightbox();
+  });
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function (e) {
+    if (!lightboxModal.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  });
+  
+  // Click on project image to open lightbox
+  document.querySelectorAll('.clickable-image').forEach(function (img) {
+    img.addEventListener('click', function () {
+      const gallery = img.closest('.project-gallery');
+      if (gallery) {
+        const activeThumb = gallery.querySelector('.thumb.active');
+        const allThumbs = gallery.querySelectorAll('.thumb');
+        let index = 0;
+        allThumbs.forEach(function (thumb, i) {
+          if (thumb === activeThumb) index = i;
+        });
+        openLightbox(gallery, index);
+      }
+    });
+  });
+
   // --- Smooth scroll for anchor links (fallback for older browsers) ---
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {

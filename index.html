@@ -29,6 +29,17 @@
   <!-- Scroll Progress Indicator -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
+  <!-- Image Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-container">
+      <img src="" alt="" class="lightbox-image" id="lightboxImage">
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+    <div class="lightbox-counter"><span id="lightboxCurrent">1</span> / <span id="lightboxTotal">1</span></div>
+  </div>
+
   <!-- Skip to Content (Accessibility) -->
   <a href="#about" class="skip-to-content">Skip to main content</a>
 
@@ -475,8 +486,17 @@
         <!-- Project 1: Featured - Polyglot gRPC Calculator -->
         <article class="project-card project-card-featured reveal">
           <div class="project-card-header">
-            <div class="project-folder" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="project-gallery">
+              <img src="assets/poly_glot/dashboard.png" alt="Polyglot dashboard" class="project-image clickable-image">
+              <div class="gallery-nav">
+                <button class="gallery-prev" aria-label="Previous image">&#10094;</button>
+                <button class="gallery-next" aria-label="Next image">&#10095;</button>
+              </div>
+              <div class="gallery-thumbs">
+                <img src="assets/poly_glot/dashboard.png" alt="Dashboard" class="thumb active" data-src="assets/poly_glot/dashboard.png">
+                <img src="assets/poly_glot/prometheus.png" alt="Prometheus metrics" class="thumb" data-src="assets/poly_glot/prometheus.png">
+                <img src="assets/poly_glot/services_used.png" alt="Services architecture" class="thumb" data-src="assets/poly_glot/services_used.png">
+              </div>
             </div>
             <div class="project-links">
               <a href="https://github.com/TChallala/-polyglot-grpc-calculator" target="_blank" rel="noopener noreferrer" aria-label="View Polyglot gRPC Calculator on GitHub">
@@ -504,8 +524,18 @@
         <!-- Project 2 -->
         <div class="project-card reveal">
           <div class="project-card-header">
-            <div class="project-folder">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="project-gallery">
+              <img src="assets/AI-vehicle-detection/AI-snapshot1.png" alt="Vehicle detection in action" class="project-image clickable-image">
+              <div class="gallery-nav">
+                <button class="gallery-prev" aria-label="Previous image">&#10094;</button>
+                <button class="gallery-next" aria-label="Next image">&#10095;</button>
+              </div>
+              <div class="gallery-thumbs">
+                <img src="assets/AI-vehicle-detection/AI-snapshot1.png" alt="Snapshot 1" class="thumb active" data-src="assets/AI-vehicle-detection/AI-snapshot1.png">
+                <img src="assets/AI-vehicle-detection/AI-snap2.png" alt="Snapshot 2" class="thumb" data-src="assets/AI-vehicle-detection/AI-snap2.png">
+                <img src="assets/AI-vehicle-detection/AI-snapped_violator.png" alt="Violator detection" class="thumb" data-src="assets/AI-vehicle-detection/AI-snapped_violator.png">
+                <img src="assets/AI-vehicle-detection/AI-violators_table.png" alt="Violators table" class="thumb" data-src="assets/AI-vehicle-detection/AI-violators_table.png">
+              </div>
             </div>
           </div>
           <h3 class="project-title">Vehicle Detection and Counter</h3>
@@ -525,8 +555,19 @@
         <!-- Project 3 -->
         <div class="project-card reveal">
           <div class="project-card-header">
-            <div class="project-folder">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+            <div class="project-gallery">
+              <img src="assets/protocols&threads/protocgrid.png" alt="Protocol grid view" class="project-image clickable-image">
+              <div class="gallery-nav">
+                <button class="gallery-prev" aria-label="Previous image">&#10094;</button>
+                <button class="gallery-next" aria-label="Next image">&#10095;</button>
+              </div>
+              <div class="gallery-thumbs">
+                <img src="assets/protocols&threads/protocgrid.png" alt="Protocol grid" class="thumb active" data-src="assets/protocols&threads/protocgrid.png">
+                <img src="assets/protocols&threads/proview.png" alt="Protocol view" class="thumb" data-src="assets/protocols&threads/proview.png">
+                <img src="assets/protocols&threads/create-proto.png" alt="Create protocol" class="thumb" data-src="assets/protocols&threads/create-proto.png">
+                <img src="assets/protocols&threads/Protocols.png" alt="Protocols list" class="thumb" data-src="assets/protocols&threads/Protocols.png">
+                <img src="assets/protocols&threads/adminview.png" alt="Admin view" class="thumb" data-src="assets/protocols&threads/adminview.png">
+              </div>
             </div>
           </div>
           <h3 class="project-title">Protocol & Threads</h3>
