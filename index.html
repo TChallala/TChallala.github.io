@@ -43,42 +43,85 @@
   <!-- Skip to Content (Accessibility) -->
   <a href="#about" class="skip-to-content">Skip to main content</a>
 
-  <!-- ===== NAVIGATION ===== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="navbar" aria-label="Sidebar">
+    <div class="sidebar-top">
       <a href="#hero" class="nav-logo">
         <span class="logo-bracket">&lt;</span>TG<span class="logo-bracket">/&gt;</span>
       </a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-        <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-        <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-      </button>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="sidebar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
-  </nav>
+
+    <div class="sidebar-body" id="navMenu">
+      <div class="sidebar-identity">
+        <h2 class="sidebar-name">Teofilo <span class="accent">Gonzaga III</span></h2>
+        <p class="sidebar-title">Full Stack Developer &middot; QA Engineer</p>
+        <p class="sidebar-tagline">Scalable web apps, distributed systems &amp; streaming platforms.</p>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" class="nav-link"><span class="nav-index">01.</span>About</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-index">02.</span>Skills</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-index">03.</span>Experience</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-index">04.</span>Projects</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-index">05.</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open to Opportunities</span>
+        </div>
+        <div class="sidebar-contact">
+          <a href="mailto:theo3rdg@gmail.com" class="sidebar-contact-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            theo3rdg@gmail.com
+          </a>
+          <span class="sidebar-contact-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Bukidnon, Philippines
+          </span>
+        </div>
+        <div class="contact-socials">
+          <a href="https://github.com/TChallala" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/teofilo-iii-gonzaga-300934358/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/teofilo.808150/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero" id="hero">
@@ -107,19 +150,20 @@
       </div>
       
       <h2 class="hero-tagline reveal">
-        <span class="tagline-text" id="heroTagline">I build reliable web applications & distributed systems.</span>
+        <span class="tagline-text" id="heroTagline">I build scalable web apps, distributed systems & streaming platforms.</span>
       </h2>
       
       <p class="hero-description reveal" id="heroDescription">
-        Full Stack Developer with hands-on experience in modern frontend/backend technologies, 
-        microservices, and a <strong>QA-first mindset</strong>. I don't just ship code &mdash; 
-        I make sure it works and stays that way.
+        Full Stack Developer building scalable web and cross-platform applications with 
+        React, React Native, Django, and Node.js &mdash; from backend services and DRM-integrated 
+        media delivery to containerized deployments, with a <strong>QA-first mindset</strong>. 
+        I don't just ship code &mdash; I make sure it works and stays that way.
       </p>
       
       <div class="hero-meta reveal">
         <div class="meta-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-          <span>Currently @ <strong>Project Moonshot</strong></span>
+          <span>Currently @ <strong>Freelance Full Stack</strong></span>
         </div>
         <div class="meta-item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -170,11 +214,11 @@
             first line of code.
           </p>
           <p>
-            Currently working as a <strong>Junior QA Automation Engineer</strong> at 
-            Project Moonshot, I bring a quality-first mindset into every project. 
-            Whether it's building a full-stack application from scratch or writing 
-            automated tests to catch regressions, I focus on delivering software 
-            that's both functional and dependable.
+            Currently working as a <strong>Freelance Full Stack Developer</strong>, I'm building 
+            a multiplatform streaming media application using React Native and Django &mdash; 
+            covering platform infrastructure, DRM integration, backend services, and media delivery. 
+            I bring a quality-first mindset into every project, backed by previous QA automation 
+            experience.
           </p>
           <p>
             I've freelanced on 8+ projects ranging from full-stack web systems to 
@@ -268,6 +312,7 @@
             <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
             <span class="skill-tag"><i class="devicon-vuejs-plain colored"></i> Vue.js</span>
             <span class="skill-tag"><i class="devicon-react-original colored"></i> React</span>
+            <span class="skill-tag">React Native</span>
             <span class="skill-tag">Responsive Design</span>
           </div>
         </div>
@@ -290,6 +335,9 @@
             <span class="skill-tag">REST APIs</span>
             <span class="skill-tag">gRPC</span>
             <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">JWT / OAuth</span>
+            <span class="skill-tag">MERN</span>
+            <span class="skill-tag skill-primary"><i class="devicon-redis-plain colored"></i> Redis &amp; Celery</span>
           </div>
         </div>
         <!-- Database -->
@@ -348,6 +396,8 @@
             <span class="skill-tag"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
             <span class="skill-tag"><i class="devicon-linux-plain"></i> Linux (Arch)</span>
             <span class="skill-tag"><i class="devicon-windows11-original colored"></i> Windows 11</span>
+            <span class="skill-tag">DRM Integration</span>
+            <span class="skill-tag">HLS / DASH Streaming</span>
             <span class="skill-tag">CI/CD Concepts</span>
           </div>
         </div>
@@ -379,15 +429,44 @@
         <span class="section-number">03.</span> Experience
       </h2>
       <div class="timeline">
-        <!-- Entry 1: Current Role -->
+        <!-- Entry 1: Current Role - Freelance -->
         <div class="timeline-item timeline-current reveal">
           <div class="timeline-dot timeline-dot-current"></div>
           <div class="timeline-content">
             <span class="timeline-badge">Current</span>
             <div class="timeline-header">
+              <h3>Freelance Full Stack Developer</h3>
+              <span class="timeline-company">Self-Employed</span>
+              <span class="timeline-date">2021 &mdash; Present</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Design, develop, and maintain scalable web and cross-platform applications for clients</li>
+              <li>Build a multiplatform streaming media application with React Native and Django</li>
+              <li>Implement DRM solutions and support adaptive streaming via HLS/DASH</li>
+              <li>Develop RESTful APIs with JWT/OAuth authentication and authorization</li>
+              <li>Use Redis and Celery for caching, async tasks, and background jobs</li>
+              <li>Deploy and maintain applications in Docker and Linux environments</li>
+            </ul>
+            <div class="timeline-tech">
+              <span>React Native</span>
+              <span>Django</span>
+              <span>DRM</span>
+              <span>HLS/DASH</span>
+              <span>Redis</span>
+              <span>Celery</span>
+              <span>Docker</span>
+              <span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+        <!-- Entry 2: QA Automation -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
               <h3>Junior QA Automation Engineer</h3>
               <span class="timeline-company">Project Moonshot</span>
-              <span class="timeline-date">2025 &mdash; Present</span>
+              <span class="timeline-date">2025 &mdash; 2026</span>
             </div>
             <ul class="timeline-details">
               <li>Build and maintain UI automation test suites using Selenium and pytest</li>
@@ -405,7 +484,7 @@
             </div>
           </div>
         </div>
-        <!-- Entry 2: Intern -->
+        <!-- Entry 3: Intern -->
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -423,31 +502,6 @@
               <span>Jira</span>
               <span>Trello</span>
               <span>Scrum</span>
-            </div>
-          </div>
-        </div>
-        <!-- Entry 3: Freelance -->
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Freelance Full Stack Web Developer</h3>
-              <span class="timeline-company">Self-Employed</span>
-              <span class="timeline-date">2021 &mdash; Present</span>
-            </div>
-            <ul class="timeline-details">
-              <li>Delivered 8+ projects including full-stack web systems and distributed microservices</li>
-              <li>Built polyglot gRPC calculator with Node.js, Go, Python, Java services</li>
-              <li>Managed full project lifecycle: requirements → development → QA → deployment</li>
-              <li>Containerized services with Docker; integrated Prometheus for monitoring</li>
-            </ul>
-            <div class="timeline-tech">
-              <span>Node.js</span>
-              <span>Laravel</span>
-              <span>Vue.js</span>
-              <span>gRPC</span>
-              <span>Docker</span>
-              <span>MySQL</span>
             </div>
           </div>
         </div>
@@ -483,25 +537,53 @@
         <span class="section-number">04.</span> Projects
       </h2>
       <div class="projects-grid">
-        <!-- Project 1: Featured - Polyglot gRPC Calculator -->
+        <!-- Project 1: Featured - Multiplatform Streaming Media App -->
+        <div class="project-card project-card-featured reveal">
+          <div class="project-card-header">
+            <span class="featured-label">Featured Project</span>
+            <div class="project-folder">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+            </div>
+          </div>
+          <h3 class="project-title">Multiplatform Streaming Media App</h3>
+          <p class="project-description">
+            A cross-platform streaming media application built with React Native and Django &mdash;
+            covering platform infrastructure, Digital Rights Management (DRM) integration, 
+            backend services, and media delivery with adaptive HLS/DASH streaming, Redis/Celery
+            for async processing, and JWT/OAuth-powered authentication.
+          </p>
+          <div class="project-tech">
+            <span><i class="devicon-react-original colored"></i> React Native</span>
+            <span><i class="devicon-django-plain colored"></i> Django</span>
+            <span>DRM</span>
+            <span>HLS / DASH</span>
+            <span><i class="devicon-redis-plain colored"></i> Redis</span>
+            <span>Celery</span>
+            <span>JWT / OAuth</span>
+            <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+            <span><i class="devicon-docker-plain colored"></i> Docker</span>
+          </div>
+        </div>
+        <!-- Project 2: Featured - Polyglot gRPC Calculator -->
         <article class="project-card project-card-featured reveal">
           <div class="project-card-header">
-            <div class="project-gallery">
-              <img src="assets/poly_glot/dashboard.png" alt="Polyglot dashboard" class="project-image clickable-image">
-              <div class="gallery-nav">
-                <button class="gallery-prev" aria-label="Previous image">&#10094;</button>
-                <button class="gallery-next" aria-label="Next image">&#10095;</button>
-              </div>
-              <div class="gallery-thumbs">
-                <img src="assets/poly_glot/dashboard.png" alt="Dashboard" class="thumb active" data-src="assets/poly_glot/dashboard.png">
-                <img src="assets/poly_glot/prometheus.png" alt="Prometheus metrics" class="thumb" data-src="assets/poly_glot/prometheus.png">
-                <img src="assets/poly_glot/services_used.png" alt="Services architecture" class="thumb" data-src="assets/poly_glot/services_used.png">
-              </div>
-            </div>
+            <span class="featured-label">Featured Project</span>
             <div class="project-links">
               <a href="https://github.com/TChallala/-polyglot-grpc-calculator" target="_blank" rel="noopener noreferrer" aria-label="View Polyglot gRPC Calculator on GitHub">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
               </a>
+            </div>
+          </div>
+          <div class="project-gallery">
+            <img src="assets/poly_glot/dashboard.png" alt="Polyglot dashboard" class="project-image clickable-image">
+            <div class="gallery-nav">
+              <button class="gallery-prev" aria-label="Previous image">&#10094;</button>
+              <button class="gallery-next" aria-label="Next image">&#10095;</button>
+            </div>
+            <div class="gallery-thumbs">
+              <img src="assets/poly_glot/dashboard.png" alt="Dashboard" class="thumb active" data-src="assets/poly_glot/dashboard.png">
+              <img src="assets/poly_glot/prometheus.png" alt="Prometheus metrics" class="thumb" data-src="assets/poly_glot/prometheus.png">
+              <img src="assets/poly_glot/services_used.png" alt="Services architecture" class="thumb" data-src="assets/poly_glot/services_used.png">
             </div>
           </div>
           <h3 class="project-title">Polyglot gRPC Calculator Microservices</h3>
@@ -521,7 +603,7 @@
             <span role="listitem"><i class="devicon-prometheus-original colored"></i> Prometheus</span>
           </div>
         </article>
-        <!-- Project 2 -->
+        <!-- Project 3 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-gallery">
@@ -552,7 +634,7 @@
             <span>Computer Vision</span>
           </div>
         </div>
-        <!-- Project 3 -->
+        <!-- Project 4 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-gallery">
@@ -585,7 +667,7 @@
             <span>SQLite</span>
           </div>
         </div>
-        <!-- Project 4 -->
+        <!-- Project 5 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-folder">
@@ -603,7 +685,7 @@
             <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
           </div>
         </div>
-        <!-- Project 5 -->
+        <!-- Project 6 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-folder">
@@ -622,7 +704,7 @@
             <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
           </div>
         </div>
-        <!-- Project 6 -->
+        <!-- Project 7 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-folder">
@@ -641,7 +723,7 @@
             <span>XAMPP</span>
           </div>
         </div>
-        <!-- Project 7 -->
+        <!-- Project 8 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-folder">
@@ -659,7 +741,7 @@
             <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
           </div>
         </div>
-        <!-- Project 8 -->
+        <!-- Project 9 -->
         <div class="project-card reveal">
           <div class="project-card-header">
             <div class="project-folder">
@@ -758,6 +840,7 @@
       <p class="footer-sub">Built with HTML, CSS & JavaScript</p>
     </div>
   </footer>
+  </main>
 
   <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">

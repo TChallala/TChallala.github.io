@@ -25,8 +25,8 @@
   // --- Role Content Data ---
   const roleContent = {
     fullstack: {
-      tagline: 'I build reliable web applications & distributed systems.',
-      description: 'Full Stack Developer with hands-on experience in modern frontend/backend technologies, microservices, and a <strong>QA-first mindset</strong>. I don\'t just ship code &mdash; I make sure it works and stays that way.'
+      tagline: 'I build scalable web apps, distributed systems & streaming platforms.',
+      description: 'Full Stack Developer building scalable web and cross-platform applications with React, React Native, Django, and Node.js — from backend services and DRM-integrated media delivery to containerized deployments, with a <strong>QA-first mindset</strong>. I don\'t just ship code — I make sure it works and stays that way.'
     },
     qa: {
       tagline: 'I ensure software quality through UI, API & E2E automation.',
