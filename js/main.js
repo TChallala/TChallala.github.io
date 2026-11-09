@@ -17,6 +17,25 @@
   const sections = document.querySelectorAll('.section');
   const reveals = document.querySelectorAll('.reveal');
 
+  // Keep the rendered page aligned with the way clients evaluate the work.
+  const mainContent = document.querySelector('.main-content');
+  const footer = mainContent ? mainContent.querySelector('.footer') : null;
+  const clientSectionOrder = [
+    'services',
+    'projects',
+    'experience',
+    'skills',
+    'about',
+    'contact'
+  ];
+
+  if (mainContent && footer) {
+    clientSectionOrder.forEach(function (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) mainContent.insertBefore(section, footer);
+    });
+  }
+
   // --- Role Switcher Elements ---
   const roleTabs = document.querySelectorAll('.role-tab');
   const heroTagline = document.getElementById('heroTagline');
@@ -25,12 +44,12 @@
   // --- Role Content Data ---
   const roleContent = {
     fullstack: {
-      tagline: 'I build scalable web apps, distributed systems & streaming platforms.',
-      description: 'Full Stack Developer building scalable web and cross-platform applications with React, React Native, Django, and Node.js — from backend services and DRM-integrated media delivery to containerized deployments, with a <strong>QA-first mindset</strong>. I don\'t just ship code — I make sure it works and stays that way.'
+      tagline: 'Build, improve, and maintain the digital tools your business depends on.',
+      description: 'I help businesses launch responsive websites, improve <strong>WordPress, Shopify, and Wix</strong> sites, and build custom full-stack applications. Every project combines clear communication, thoughtful implementation, and practical QA from the start.'
     },
     qa: {
-      tagline: 'I ensure software quality through UI, API & E2E automation.',
-      description: 'SDET with expertise in <strong>UI automation</strong>, <strong>API automation</strong>, and <strong>end-to-end testing</strong>. I build robust test frameworks using pytest, Selenium, and BDD &mdash; catching bugs before they reach production.'
+      tagline: 'Release dependable software with testing built into delivery.',
+      description: 'I test critical user journeys, APIs, and integrations through <strong>UI, API, regression, and end-to-end testing</strong> &mdash; helping teams catch problems earlier and release with greater confidence.'
     }
   };
 
@@ -234,7 +253,7 @@
   });
 
   // --- Staggered reveal for skill categories and project cards ---
-  var staggerContainers = document.querySelectorAll('.skills-grid, .projects-grid, .about-highlights');
+  var staggerContainers = document.querySelectorAll('.services-grid, .skills-grid, .projects-grid, .about-highlights');
 
   staggerContainers.forEach(function (container) {
     var children = container.querySelectorAll('.reveal');
